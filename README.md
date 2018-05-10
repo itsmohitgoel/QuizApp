@@ -12,4 +12,4 @@ This app is educational app, build as part of Android Basic Nanodegree by Udacit
 - Once all Ten questions are attempted, Submit button will be displayed, followed by Result.
 
 ## Screenshots
-![1](https://user-images.githubusercontent.com/13984005/39862861-9ff8f95e-5462-11e8-9679-ce910f825387.png)
+
