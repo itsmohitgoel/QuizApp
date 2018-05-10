@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootview_linear_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.mohgoel.quizapp.MainActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.2"
+        android:gravity="center_vertical"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/question_1_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="handleAnswer"
+            android:foreground="?attr/selectableItemBackground"
+            android:textColor="@android:color/white"
+            android:text="Q1" />
+
+        <Button
+            android:id="@+id/question_2_btn"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:onClick="handleAnswer"
+            android:layout_height="wrap_content"
+            android:text="Q2" />
+
+        <Button
+            android:id="@+id/question_3_btn"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="handleAnswer"
+            android:text="Q3" />
+
+        <Button
+            android:id="@+id/question_4_btn"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:onClick="handleAnswer"
+            android:layout_height="wrap_content"
+            android:text="Q4" />
+
+        <Button
+            android:id="@+id/question_5_btn"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:onClick="handleAnswer"
+            android:layout_height="wrap_content"
+            android:text="Q5" />
+
+        <Button
+            android:id="@+id/question_6_btn"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:onClick="handleAnswer"
+            android:layout_height="wrap_content"
+            android:text="Q6" />
+
+        <Button
+            android:id="@+id/question_7_btn"
+            android:textColor="@android:color/white"
+            android:layout_width="match_parent"
+            android:onClick="handleAnswer"
+            android:layout_height="wrap_content"
+            android:text="Q7" />
+
+        <Button
+            android:id="@+id/question_8_btn"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:onClick="handleAnswer"
+            android:layout_height="wrap_content"
+            android:text="Q8" />
+
+        <Button
+            android:id="@+id/question_9_btn"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"
+            android:onClick="handleAnswer"
+            android:text="Q9" />
+
+        <Button
+            android:id="@+id/question_10_btn"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:onClick="handleAnswer"
+            android:layout_height="wrap_content"
+            android:text="Q10" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/question_page_linear_layout"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_weight="8"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            android:foreground="?attr/selectableItemBackground"
+            android:clickable="true"
+            app:cardElevation="6dp"
+            app:cardMaxElevation="10dp"
+            app:cardPreventCornerOverlap="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.example.mohgoel.quizapp.SelectableRoundedImageView
+                    android:id="@+id/question_image_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:scaleType="centerCrop"
+                    app:sriv_left_top_corner_radius="16dp"
+                    app:sriv_right_top_corner_radius="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/question_stmt_text_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="8dp"
+                        android:paddingTop="8dp"
+                        tools:text="@string/question_1"
+                        android:textColor="#000000"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:id="@+id/options_view_linear_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="5"
+                        android:orientation="vertical">
+                    <!--<RadioGroup-->
+                        <!--android:id="@+id/answer_radio_group"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content">-->
+                    <!--</RadioGroup>-->
+
+                    <CheckBox
+                        android:id="@+id/checkbox_option_1"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+                    <CheckBox
+                        android:id="@+id/checkbox_option_2"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+                    <CheckBox
+                        android:id="@+id/checkbox_option_3"
+                        android:layout_width="wrap_content"
+                        android:visibility="gone"
+                        android:layout_height="wrap_content" />
+                    <CheckBox
+                        android:id="@+id/checkbox_option_4"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                    <EditText
+                        android:id="@+id/textual_choice_edit_text_view"
+                        android:layout_width="match_parent"
+                        android:hint="Enter Your Answer Here"
+                        android:visibility="gone"
+                        android:inputType="number"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="#FF9A43A3"
+                    android:orientation="horizontal">
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:elevation="30dp"
+                        android:text="Reset"
+                        android:onClick="reset"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:background="#FF803D87"
+                        android:elevation="30dp" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button1"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:elevation="30dp"
+                        android:text="Next"
+                        android:onClick="nextQue"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" />
+
+                    <android.support.v7.widget.AppCompatButton
+                        android:id="@+id/button3"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="?attr/selectableItemBackground"
+                        android:elevation="30dp"
+                        android:text="Submit"
+                        android:onClick="submit"
+                        android:textAllCaps="false"
+                        android:textColor="#ffffff"
+                        android:textSize="18sp" android:visibility="gone"/>
+
+                </LinearLayout>
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+    <View
+        android:id="@+id/shuttle"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@android:color/holo_blue_bright"/>
+</LinearLayout>

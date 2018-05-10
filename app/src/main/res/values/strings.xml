@@ -1,0 +1,83 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="question_1">Ques1: What is the India’s GDP growth rate for 2018-19, as per latest economic data by Asian Development Bank (ADB)?</string>
+    <string-array name="options_for_question_1">
+        <item>1.5%</item>
+        <item>2.5%</item>
+        <item>7.3%</item>
+        <item>9.8%</item>
+    </string-array>
+
+    <string name="question_2">Ques2: Among the following Union Territories of India, which one has the largest size ?</string>
+    <string-array name="options_for_question_2">
+        <item>Lakshadweep</item>
+        <item>Daman and Due</item>
+        <item>Pondicherry</item>
+        <item>Chandigarh</item>
+    </string-array>
+
+    <string name="question_3">Ques3: Which of the following players was the brand ambassador of Cricket world cup 2015?</string>
+    <string-array name="options_for_question_3">
+        <item>Sharne Warne</item>
+        <item>Brian Lara</item>
+        <item>Sachin Tendulkar</item>
+        <item>Adam Gilchrist</item>
+    </string-array>
+
+    <string name="question_4">Ques4:  Among the following planets, which is the brightest planet ?</string>
+    <string-array name="options_for_question_4">
+        <item>Mercury</item>
+        <item>Mars</item>
+        <item>Venus</item>
+        <item>Jupiter</item>
+    </string-array>
+
+    <string name="question_5">Ques5: The hardest substance available on earth is</string>
+    <string-array name="options_for_question_5">
+        <item>Gold</item>
+        <item>Iron</item>
+        <item>Diamond</item>
+        <item>Platinum</item>
+    </string-array>
+
+    <string name="question_6">Ques6: Ajanta-Ellora caves are situated near</string>
+    <string-array name="options_for_question_6">
+        <item>Ajmer</item>
+        <item>Jaipur</item>
+        <item>Aurangabad</item>
+        <item>Patna</item>
+    </string-array>
+
+    <string name="question_7">Ques7: The Indian Institute of Science is located at</string>
+    <string-array name="options_for_question_7">
+        <item>Kerela</item>
+        <item>Chennai</item>
+        <item>Bangalore</item>
+        <item>New Delhi</item>
+    </string-array>
+
+    <string name="question_8">Ques8: Identify the missing term from the following number series ?\n 13, 18 16, 21, 19, 24,_?</string>
+    <string-array name="options_for_question_8">
+        <item>22</item>
+        <item>22</item>
+        <item>22</item>
+        <item>22</item>
+    </string-array>
+
+    <string name="question_9">Ques9: which of the following are states of India?</string>
+    <string-array name="options_for_question_9">
+        <item>Rajasthan</item>
+        <item>Haryana</item>
+        <item>Punjab</item>
+        <item>Bangalore</item>
+    </string-array>
+
+    <string name="question_10">Ques10: CFCs are used as</string>
+    <string-array name="options_for_question_10">
+        <item>insulators</item>
+        <item>aerosol propellants</item>
+        <item>refrigerative</item>
+        <item>All of the above</item>
+    </string-array>
+
+</resources>
