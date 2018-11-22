@@ -29,7 +29,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
-                android:text="Your Score"
+                android:text="@string/dialog_title"
                 android:textSize="24sp"
                 android:textStyle="bold"
                 android:textColor="#7c3a82"
@@ -52,7 +52,7 @@
                 android:layout_weight="1"
                 android:gravity="center_horizontal"
                 android:textStyle="bold"
-                android:text="Correct" />
+                android:text="@string/dialog_column_header_correct" />
 
             <TextView
                 android:layout_width="0dp"
@@ -60,7 +60,7 @@
                 android:gravity="center_horizontal"
                 android:layout_weight="1"
                 android:textStyle="bold"
-                android:text="Incorrect" />
+                android:text="@string/dialog_column_header_incorrect" />
 
 
         </LinearLayout>
@@ -77,7 +77,7 @@
                 android:gravity="center_horizontal"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="0" />
+                tools:text="0" />
 
             <TextView
                 android:id="@+id/incorrect_count_textview"
@@ -85,7 +85,7 @@
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
-                android:text="0" />
+                tools:text="0" />
 
         </LinearLayout>
 

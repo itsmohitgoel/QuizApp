@@ -22,7 +22,7 @@ public class PopulateQuestions {
 
     public ArrayList<Question> createQuestionaire() {
         //1. Check if list is not null and not empty
-        if (mQuestionsList != null && !mQuestionsList.isEmpty()){
+        if (mQuestionsList != null && !mQuestionsList.isEmpty()) {
             return mQuestionsList;
         }
 
@@ -30,7 +30,6 @@ public class PopulateQuestions {
         for (int i = 1; i < 8; i++) {
             Question singleChoiceQuestion = new Question(Question.QUESTION_TYPE.SINGLE);
             singleChoiceQuestion.setId(i);
-//            singleChoiceQuestion.setStatement(mContext.getString(R.string.question_1)+i);
             singleChoiceQuestion.setStatement(mContext.getString(getStringResourceIdByName("question_" + i)));
             String[] options = mContext.getResources()
                     .getStringArray(getStringArrayIdByName("options_for_question_" + i));
@@ -73,11 +72,13 @@ public class PopulateQuestions {
         int resId = mContext.getResources().getIdentifier(keyName, "string", packageName);
         return resId;
     }
+
     private int getStringArrayIdByName(String keyName) {
         String packageName = mContext.getPackageName();
         int resId = mContext.getResources().getIdentifier(keyName, "array", packageName);
         return resId;
     }
+
     private int getDrawableIdByName(String keyName) {
         String packageName = mContext.getPackageName();
         int resId = mContext.getResources().getIdentifier(keyName, "drawable", packageName);
@@ -96,20 +97,20 @@ public class PopulateQuestions {
     }
 
     public boolean getIsAllAttempted() {
-        boolean isAllAttempted=true;
+        boolean isAllAttempted = true;
         for (int i = 0; i < mQuestionsList.size(); i++) {
-            if(!mQuestionsList.get(i).isAttempted()){
-                isAllAttempted=false;
+            if (!mQuestionsList.get(i).isAttempted()) {
+                isAllAttempted = false;
                 break;
             }
         }
         return isAllAttempted;
     }
 
-    public int getScore(){
-        int score=0;
+    public int getScore() {
+        int score = 0;
         for (Question question : mQuestionsList) {
-            if(question.getUserAnswer()!=null&&question.getUserAnswer().equals(question.getCorrectAnswer())){
+            if (question.getUserAnswer() != null && question.getUserAnswer().equals(question.getCorrectAnswer())) {
                 score++;
             }
         }

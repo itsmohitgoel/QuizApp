@@ -1,14 +1,12 @@
 package com.example.mohgoel.quizapp;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
-import android.graphics.Color;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
@@ -27,7 +25,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity implements RadioGroup.OnCheckedChangeListener,
         CheckBox.OnCheckedChangeListener, TextWatcher {
-    public static final String TAG = MainActivity.class.getSimpleName();
+    private static final String TAG = MainActivity.class.getSimpleName();
     private Question currentQuestion;
     private PopulateQuestions mPopulateQuestions;
     private ArrayList<Question> mQuestionaire;
@@ -35,7 +33,6 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
 
     //Views Declaration
     private TextView tvQuestionStatement;
-    private RadioGroup radioGroupChoices;
     private SelectableRoundedImageView mImageView;
     private LinearLayout llRootView, llOptionsView;
     private CheckBox cbOption1, cbOption2, cbOption3, cbOption4;
@@ -46,15 +43,15 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mImageView = (SelectableRoundedImageView) findViewById(R.id.question_image_view);
-        llRootView = (LinearLayout) findViewById(R.id.rootview_linear_layout);
-        llOptionsView = (LinearLayout) findViewById(R.id.options_view_linear_layout);
-        tvQuestionStatement = (TextView) findViewById(R.id.question_stmt_text_view);
-        cbOption1 = (CheckBox) findViewById(R.id.checkbox_option_1);
-        cbOption2 = (CheckBox) findViewById(R.id.checkbox_option_2);
-        cbOption3 = (CheckBox) findViewById(R.id.checkbox_option_3);
-        cbOption4 = (CheckBox) findViewById(R.id.checkbox_option_4);
-        etTextualChoice = (EditText) findViewById(R.id.textual_choice_edit_text_view);
+        mImageView =  findViewById(R.id.question_image_view);
+        llRootView =  findViewById(R.id.rootview_linear_layout);
+        llOptionsView = findViewById(R.id.options_view_linear_layout);
+        tvQuestionStatement = findViewById(R.id.question_stmt_text_view);
+        cbOption1 = findViewById(R.id.checkbox_option_1);
+        cbOption2 = findViewById(R.id.checkbox_option_2);
+        cbOption3 = findViewById(R.id.checkbox_option_3);
+        cbOption4 = findViewById(R.id.checkbox_option_4);
+        etTextualChoice = findViewById(R.id.textual_choice_edit_text_view);
 
         initQue();
     }
@@ -122,7 +119,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         resetClickedAnswer();
         tvQuestionStatement.setText(question.getStatement());
         llOptionsView.removeAllViews();
-        radioGroupChoices = new RadioGroup(this);
+        RadioGroup radioGroupChoices = new RadioGroup(this);
         radioGroupChoices.setOnCheckedChangeListener(this);
         if (MainActivity.this.getResources().getConfiguration().orientation
                 == Configuration.ORIENTATION_LANDSCAPE) {
@@ -236,10 +233,10 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_yesno);
 
-        TextView tvMessage = (TextView) dialog.findViewById(R.id.textDialogYesNoMessage);
-        tvMessage.setText("Do You want to save your answer ?");
+        TextView tvMessage = dialog.findViewById(R.id.textDialogYesNoMessage);
+        tvMessage.setText(R.string.header_dialog_save_answer);
 
-        Button btnYes = (Button) dialog.findViewById(R.id.btnDialogYes);
+        Button btnYes = dialog.findViewById(R.id.btnDialogYes);
         btnYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -249,7 +246,7 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
             }
         });
 
-        Button btnNo = (Button) dialog.findViewById(R.id.btnDialogNo);
+        Button btnNo = dialog.findViewById(R.id.btnDialogNo);
         btnNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -362,11 +359,10 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         final Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_result);
 
-        TextView tvCorrectCount = (TextView) dialog.findViewById(R.id.correct_count_textview);
-        TextView tvInCorrectCount = (TextView) dialog.findViewById(R.id.incorrect_count_textview);
-        tvCorrectCount.setText(score+"");
-        tvInCorrectCount.setText((10-score) + "");
-
+        TextView tvCorrectCount = dialog.findViewById(R.id.correct_count_textview);
+        TextView tvInCorrectCount = dialog.findViewById(R.id.incorrect_count_textview);
+        tvCorrectCount.setText(score + "");
+        tvInCorrectCount.setText((10 - score) + "");
 
 
         dialog.show();

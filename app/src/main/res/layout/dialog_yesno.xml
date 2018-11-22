@@ -29,7 +29,7 @@
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1.0"
-                android:text="Dialog message will come here"
+                tools:text="Dialog message will come here"
                 android:textAlignment="center" />
 
 
@@ -49,7 +49,7 @@
                 android:layout_height="wrap_content"
                 android:foreground="?attr/selectableItemBackground"
                 android:layout_weight="0.20"
-                android:text="Save"
+                android:text="@string/label_button_save"
                 android:textColor="@android:color/white" />
 
             <View
@@ -64,7 +64,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.20"
                 android:foreground="?attr/selectableItemBackground"
-                android:text="Discard"
+                android:text="@string/label_button_discard"
                 android:textColor="@android:color/white" />
 
 

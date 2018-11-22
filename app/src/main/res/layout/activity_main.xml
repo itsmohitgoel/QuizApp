@@ -22,7 +22,7 @@
             android:onClick="handleAnswer"
             android:foreground="?attr/selectableItemBackground"
             android:textColor="@android:color/white"
-            android:text="Q1" />
+            android:text="@string/label_q1" />
 
         <Button
             android:id="@+id/question_2_btn"
@@ -30,7 +30,7 @@
             android:textColor="@android:color/white"
             android:onClick="handleAnswer"
             android:layout_height="wrap_content"
-            android:text="Q2" />
+            android:text="@string/label_q2" />
 
         <Button
             android:id="@+id/question_3_btn"
@@ -38,7 +38,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="handleAnswer"
-            android:text="Q3" />
+            android:text="@string/label_q3" />
 
         <Button
             android:id="@+id/question_4_btn"
@@ -46,7 +46,7 @@
             android:textColor="@android:color/white"
             android:onClick="handleAnswer"
             android:layout_height="wrap_content"
-            android:text="Q4" />
+            android:text="@string/label_q4" />
 
         <Button
             android:id="@+id/question_5_btn"
@@ -54,7 +54,7 @@
             android:textColor="@android:color/white"
             android:onClick="handleAnswer"
             android:layout_height="wrap_content"
-            android:text="Q5" />
+            android:text="@string/label_q5" />
 
         <Button
             android:id="@+id/question_6_btn"
@@ -62,7 +62,7 @@
             android:textColor="@android:color/white"
             android:onClick="handleAnswer"
             android:layout_height="wrap_content"
-            android:text="Q6" />
+            android:text="@string/label_q6" />
 
         <Button
             android:id="@+id/question_7_btn"
@@ -70,7 +70,7 @@
             android:layout_width="match_parent"
             android:onClick="handleAnswer"
             android:layout_height="wrap_content"
-            android:text="Q7" />
+            android:text="@string/label_q7" />
 
         <Button
             android:id="@+id/question_8_btn"
@@ -78,7 +78,7 @@
             android:textColor="@android:color/white"
             android:onClick="handleAnswer"
             android:layout_height="wrap_content"
-            android:text="Q8" />
+            android:text="@string/label_q8" />
 
         <Button
             android:id="@+id/question_9_btn"
@@ -86,7 +86,7 @@
             android:textColor="@android:color/white"
             android:layout_height="wrap_content"
             android:onClick="handleAnswer"
-            android:text="Q9" />
+            android:text="@string/label_q9" />
 
         <Button
             android:id="@+id/question_10_btn"
@@ -94,7 +94,7 @@
             android:textColor="@android:color/white"
             android:onClick="handleAnswer"
             android:layout_height="wrap_content"
-            android:text="Q10" />
+            android:text="@string/label_q10" />
     </LinearLayout>
 
     <LinearLayout
@@ -143,7 +143,7 @@
                         android:id="@+id/question_stmt_text_view"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
                         android:paddingTop="8dp"
                         tools:text="@string/question_1"
                         android:textColor="#000000"
@@ -185,7 +185,7 @@
                     <EditText
                         android:id="@+id/textual_choice_edit_text_view"
                         android:layout_width="match_parent"
-                        android:hint="Enter Your Answer Here"
+                        android:hint="@string/hint_enter_answer"
                         android:visibility="gone"
                         android:inputType="number"
                         android:layout_height="wrap_content" />
@@ -205,7 +205,7 @@
                         android:layout_weight="1"
                         android:background="?attr/selectableItemBackground"
                         android:elevation="30dp"
-                        android:text="Reset"
+                        android:text="@string/label_button_reset"
                         android:onClick="reset"
                         android:textAllCaps="false"
                         android:textColor="#ffffff"
@@ -224,7 +224,7 @@
                         android:layout_weight="1"
                         android:background="?attr/selectableItemBackground"
                         android:elevation="30dp"
-                        android:text="Next"
+                        android:text="@string/label_button_next"
                         android:onClick="nextQue"
                         android:textAllCaps="false"
                         android:textColor="#ffffff"
@@ -237,7 +237,7 @@
                         android:layout_weight="1"
                         android:background="?attr/selectableItemBackground"
                         android:elevation="30dp"
-                        android:text="Submit"
+                        android:text="@string/label_button_submit"
                         android:onClick="submit"
                         android:textAllCaps="false"
                         android:textColor="#ffffff"

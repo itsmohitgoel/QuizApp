@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:foreground="?attr/selectableItemBackground"
                 android:onClick="handleAnswer"
-                android:text="Q1"
+                android:text="@string/label_q1"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -33,7 +33,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="handleAnswer"
-                android:text="Q2"
+                android:text="@string/label_q2"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -41,7 +41,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="handleAnswer"
-                android:text="Q3"
+                android:text="@string/label_q3"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -49,7 +49,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="handleAnswer"
-                android:text="Q4"
+                android:text="@string/label_q4"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -57,7 +57,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="handleAnswer"
-                android:text="Q5"
+                android:text="@string/label_q5"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -65,7 +65,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="handleAnswer"
-                android:text="Q6"
+                android:text="@string/label_q6"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -73,7 +73,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="handleAnswer"
-                android:text="Q7"
+                android:text="@string/label_q7"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -81,7 +81,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="handleAnswer"
-                android:text="Q8"
+                android:text="@string/label_q8"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -89,7 +89,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="handleAnswer"
-                android:text="Q9"
+                android:text="@string/label_q9"
                 android:textColor="@android:color/white" />
 
             <Button
@@ -97,7 +97,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:onClick="handleAnswer"
-                android:text="Q10"
+                android:text="@string/label_q10"
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
@@ -150,7 +150,7 @@
                         android:id="@+id/question_stmt_text_view"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:paddingLeft="8dp"
+                        android:paddingStart="8dp"
                         android:paddingTop="8dp"
                         android:textColor="#000000"
                         android:textSize="18sp"
@@ -196,7 +196,7 @@
                             android:id="@+id/textual_choice_edit_text_view"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:hint="Enter Your Answer Here"
+                            android:hint="@string/hint_enter_answer"
                             android:inputType="number"
                             android:visibility="gone" />
                     </LinearLayout>
@@ -217,7 +217,7 @@
                         android:background="?attr/selectableItemBackground"
                         android:elevation="30dp"
                         android:onClick="reset"
-                        android:text="Reset"
+                        android:text="@string/label_button_reset"
                         android:textAllCaps="false"
                         android:textColor="#ffffff"
                         android:textSize="18sp" />
@@ -236,7 +236,7 @@
                         android:background="?attr/selectableItemBackground"
                         android:elevation="30dp"
                         android:onClick="nextQue"
-                        android:text="Next"
+                        android:text="@string/label_button_next"
                         android:textAllCaps="false"
                         android:textColor="#ffffff"
                         android:textSize="18sp" />
@@ -249,7 +249,7 @@
                         android:background="?attr/selectableItemBackground"
                         android:elevation="30dp"
                         android:onClick="submit"
-                        android:text="Submit"
+                        android:text="@string/label_button_submit"
                         android:textAllCaps="false"
                         android:textColor="#ffffff"
                         android:textSize="18sp"

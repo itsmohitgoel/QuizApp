@@ -5,16 +5,16 @@ package com.example.mohgoel.quizapp;
  */
 
 public class Question {
-    public enum QUESTION_TYPE {SINGLE, MULTIPLE, TEXT};
+    public enum QUESTION_TYPE {SINGLE, MULTIPLE, TEXT}
 
     private int id;
     private QUESTION_TYPE type;
     private String statement;
-    private String[] options ;
+    private String[] options;
     private String correctAnswer;
     private String userAnswer;
     private boolean isAttempted;
-    private int  imageId;
+    private int imageId;
 
 
     public Question(QUESTION_TYPE type) {
@@ -56,6 +56,7 @@ public class Question {
     /**
      * Set 2 as correct answer index for Single choice question,
      * Set 3 as incorrect answer index for multiple choice questions.
+     *
      * @param correctAnswer
      */
     public void setCorrectAnswer(String correctAnswer) {
