@@ -1,6 +1,8 @@
 package com.example.mohgoel.quizapp;
 
+import android.app.Activity;
 import android.app.Dialog;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -122,6 +124,10 @@ public class MainActivity extends AppCompatActivity implements RadioGroup.OnChec
         llOptionsView.removeAllViews();
         radioGroupChoices = new RadioGroup(this);
         radioGroupChoices.setOnCheckedChangeListener(this);
+        if (MainActivity.this.getResources().getConfiguration().orientation
+                == Configuration.ORIENTATION_LANDSCAPE) {
+            radioGroupChoices.setOrientation(LinearLayout.HORIZONTAL);
+        }
         llOptionsView.addView(radioGroupChoices);
         cbOption1.setVisibility(View.GONE);
         cbOption2.setVisibility(View.GONE);
